@@ -20,6 +20,13 @@ function myFunction() {
     var li=document.createElement('li');
     li.className=name;
     li.appendChild(document.createTextNode(name+"   -   "+desc+"      "+price+"      "+quantity));
+    var space = document.createTextNode("\u00A0");
+    li.appendChild(space);
+    var space = document.createTextNode("\u00A0");
+    li.appendChild(space);var space = document.createTextNode("\u00A0");
+    li.appendChild(space);var space = document.createTextNode("\u00A0");
+    li.appendChild(space);var space = document.createTextNode("\u00A0");
+    li.appendChild(space);
     var buy= document.createElement('button');
     buy.className="btn";
     buy.value="buy-item";
@@ -60,6 +67,13 @@ function addItem(e){
    // console.log(localStorage.length);
     //console.log(obj);
     //console.log(li);
+    var space = document.createTextNode("\u00A0");
+    li.appendChild(space);
+    var space = document.createTextNode("\u00A0");
+    li.appendChild(space);var space = document.createTextNode("\u00A0");
+    li.appendChild(space);var space = document.createTextNode("\u00A0");
+    li.appendChild(space);var space = document.createTextNode("\u00A0");
+    li.appendChild(space);
     li.appendChild(buy);
    itemList.appendChild(li);
 
@@ -89,6 +103,13 @@ function buyItem(e){
     buy.value="buy-item";
     buy.innerHTML="buy";
         li.innerHTML=obj.name+" "+obj.description+" "+newobj.price+" "+quant;
+        var space = document.createTextNode("\u00A0");
+        li.appendChild(space);
+        var space = document.createTextNode("\u00A0");
+        li.appendChild(space);var space = document.createTextNode("\u00A0");
+        li.appendChild(space);var space = document.createTextNode("\u00A0");
+        li.appendChild(space);var space = document.createTextNode("\u00A0");
+        li.appendChild(space);
         li.appendChild(buy);
         var data = JSON.stringify(newobj);
 	localStorage.setItem(obj.name,data);
